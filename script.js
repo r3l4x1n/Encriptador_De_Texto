@@ -1,5 +1,5 @@
-const campoTexto = document.querySelector("#textoEncriptado");
-const campoMensaje = document.querySelector("#campoMensaje");
+const campoTexto = document.querySelector("#cambiarTexto");
+const campoMensaje = document.querySelector("#mensajeEncriptado");
 
 const matrizCode = [
     ['e', "enter"],  // índice 0
@@ -76,8 +76,8 @@ function desencriptar(fraseDesencriptada) {
 }
 
 async function btnCopiar() {
-    const campoMensaje = document.getElementById("campoMensaje");
-    const texto = campoMensaje.value;
+    const mensajeEncriptado = document.getElementById("mensajeEncriptado");
+    const texto = mensajeEncriptado.value;
 
     try {
         await navigator.clipboard.writeText(texto);
