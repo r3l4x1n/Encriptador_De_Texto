@@ -33,7 +33,7 @@ section:first-child {
 .btn {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly; /* Space buttons evenly */
+  justify-content: space-between;
   margin-top: 10px;
 }
 
@@ -95,14 +95,13 @@ section:last-child {
   font-size: 16px;
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 4px; /* Rounded corners */
-  resize: none; /* Disable text area resizing */
-  height: 41vh; /* Set a fixed height */
+  border-radius: 4px;
+  resize: none;
+  height: 41vh;
   width: 47vh;
   
 }
 
-/* Estilo del botón copiar */
 .btnCopiar {
 background-color: #1a4492;
 color: #fff;
@@ -116,7 +115,6 @@ flex: 1;
 margin-top: 7px;
 }
 
-/* Estilo del botón copiar al pasar el mouse */
 .btnCopiar:hover {
 background-color: #3f68b3;
 }
@@ -129,7 +127,6 @@ background-color: #3f68b3;
 section:first-child, section:last-child {
   flex: auto; /* Remueve flex-grow para que tengan el mismo ancho en pantallas pequeñas */
   width: 90%; /* Establece ancho completo para las secciones */
-  padding-left: 1vh;
 }
 .cambiarTexto, .mensajeEncriptado {
   width: 100%;
