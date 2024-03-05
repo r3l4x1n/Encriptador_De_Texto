@@ -1,0 +1,75 @@
+Reset default styles for a cleaner base
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333; /* Use a consistent text color */
+  }
+  
+  /* Main container */
+  .main {
+    display: flex; /* Arrange sections side-by-side */
+    width: 100%; /* Take up full viewport width */
+    height: 100vh; /* Take up full viewport height */
+    background-color: #f5f5f5; /* Light background color */
+    box-sizing: border-box; /* Ensure padding and border don't affect content width */
+    padding: 20px;
+  }
+  
+  /* Section for text input and buttons */
+  section:first-child {
+    flex: 1; /* Allocate equal space to this section */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    border-right: 1px solid #ddd; /* Add a subtle border */
+    padding: 10px;
+  }
+  
+  /* Text area for input */
+  .campoTexto {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Rounded corners */
+    resize: none; /* Disable text area resizing */
+    height: 300px; /* Set a fixed height */
+  }
+  
+  /* Container for buttons */
+  .btn {
+    display: flex;
+    justify-content: space-between; /* Space buttons evenly */
+    margin-top: 10px;
+  }
+  
+  /* Buttons */
+  .btnEncriptar, .btnDesencriptar, .btnLimpiar {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Indicate clickable behavior */
+    font-size: 16px;
+    background-color: #4CAF50; /* Green color like Google Translate button */
+    color: white;
+  }
+  
+  /* Hover effect for buttons (optional) */
+  .btnEncriptar:hover, .btnDesencriptar:hover, .btnLimpiar {
+    background-color: #388E3C; /* Darker green on hover */
+  }
+  
+  /* Section for output message */
+  section:last-child {
+    flex: 1; /* Allocate equal space to this section */
+    padding: 10px;
+  }
+  
+  /* Text area for output message */
+  .mensaje {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Rounded corners */
+    resize: none; /* Disable text area resizing */
+    height: 300px; /* Set a fixed height */
+  }
