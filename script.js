@@ -1,43 +1,85 @@
 const campoTexto = document.querySelector("#cambiarTexto");
 const campoMensaje = document.querySelector("#mensajeEncriptado");
 
-const matrizCode = [
-    ['e', "enter"],  // índice 0
-    ["i", 'imes'],   // índice 1
+const matrizCodgo = [
+    ["e", "enter"],  // índice 0
+    ["i", "imes"],   // índice 1
     ["a", "ai"],     // índice 2
-    ['o', "ober"],   // índice 3
+    ["o", "ober"],   // índice 3
     ["u", "ufat"],   // índice 4
 ];
 
-function btnEncriptar() {
-    const texto = campoTexto.value;
-    const contieneMayusculas = /[A-Z]/.test(texto);
-    const contieneSimbolos = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(texto);
-    const contieneCaracteresEspeciales = contieneSimbolos || /\s/.test(texto);
-
-    if (contieneCaracteresEspeciales) {
-        campoMensaje.value = "El texto no debe contener símbolos ni caracteres especiales.";
-        campoTexto.focus();
-    } else if (contieneMayusculas) {
-        campoMensaje.value = "El texto no debe contener letras mayúsculas.";
-        campoTexto.focus();
-    } else {
-        const textoEncriptado = encriptar(texto);
-        campoMensaje.value = textoEncriptado;
-    }
-}
-
 function encriptar(fraseEncriptada) {
-    for (let i = 0; i < matrizCode.length; i++) {
-        if (fraseEncriptada.includes(matrizCode[i][0])) {
+    for (let i = 0; i < matrizCodgo.length; i++) {
+        if (fraseEncriptada.includes(matrizCodgo[i][0])) {
             fraseEncriptada = fraseEncriptada.replaceAll(
-                matrizCode[i][0],
-                matrizCode[i][1]
+                matrizCodgo[i][0],
+                matrizCodgo[i][1]
             )
         }
     }
     return fraseEncriptada;
 };
+
+function desencriptar(fraseEncriptada) {
+    let desencriptado = '';
+    let i = 0;
+
+    while (i < fraseEncriptada.length) {
+        let coincidencia = false;
+
+        for (let j = 0; j < matrizCodgo.length; j++) {
+            const [original, encriptado] = matrizCodgo[j];
+            if (fraseEncriptada.startsWith(encriptado, i)) {
+                desencriptado += original;
+                i += encriptado.length;
+                coincidencia = true;
+                break;
+            }
+        }
+
+        if (!coincidencia) {
+            desencriptado += fraseEncriptada[i];
+            i++;
+        }
+    }
+    return desencriptado;
+}
+
+function validarEntrada(texto) {
+    const contieneMayusculas = /[A-Z]/.test(texto);
+    const contieneNumeros = /[0-9]/.test(texto);
+    const contieneSimbolos = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(texto);
+    const estaVacio = texto.length === 0;
+
+    if (contieneMayusculas) {
+        return "El texto no debe contener letras mayúsculas.";
+    } else if (contieneNumeros) {
+        return "El texto no debe contener números.";
+    } else if (contieneSimbolos) {
+        return "El texto no debe contener símbolos ni caracteres especiales.";
+    } else if (estaVacio) {
+        return "El texto no debe estar vacío.";
+    }
+
+    return "";
+}
+
+// ********************* BOTONES *********************
+
+function btnEncriptar() {
+    const texto = campoTexto.value;
+    const mensajeValidacion = validarEntrada(texto);
+
+    if (mensajeValidacion) {
+        campoMensaje.value = mensajeValidacion;
+        campoTexto.focus();
+        return;
+    }
+
+    const textoEncriptado = encriptar(texto);
+    campoMensaje.value = textoEncriptado;
+}
 
 function btnLimpiar() {
     campoTexto.value = "";
@@ -47,32 +89,16 @@ function btnLimpiar() {
 
 function btnDesencriptar() {
     const texto = campoTexto.value;
-    const contieneMayusculas = /[A-Z]/.test(texto);
-    const contieneSimbolos = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(texto);
-    const contieneCaracteresEspeciales = contieneSimbolos || /\s/.test(texto);
+    const mensajeValidacion = validarEntrada(texto);
 
-    if (contieneCaracteresEspeciales) {
-        campoMensaje.value = "El texto no debe contener símbolos ni caracteres especiales.";
+    if (mensajeValidacion) {
+        campoMensaje.value = mensajeValidacion;
         campoTexto.focus();
-    } else if (contieneMayusculas) {
-        campoMensaje.value = "El texto no debe contener letras mayúsculas.";
-        campoTexto.focus();
-    } else {
-        const textoDesencriptado = desencriptar(texto);
-        campoMensaje.value = textoDesencriptado;
+        return;
     }
-}
 
-function desencriptar(fraseDesencriptada) {
-    for (let i = 0; i < matrizCode.length; i++) {
-        if (fraseDesencriptada.includes(matrizCode[i][0])) {
-            fraseDesencriptada = fraseDesencriptada.replaceAll(
-                matrizCode[i][1],
-                matrizCode[i][0]
-            )
-        }
-    }
-    return fraseDesencriptada;
+    const textoDesencriptado = desencriptar(texto);
+    campoMensaje.value = textoDesencriptado;
 }
 
 async function btnCopiar() {
