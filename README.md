@@ -18,8 +18,8 @@ Este juego fue creado como parte del desafío de aprendizaje **Challenge ONE Spr
 **Restricciones:**
 El juego tiene algunas restricciones en cuanto al texto que puede procesar:
 1. Debe funcionar solo con letras minúsculas.
-2. No deben ser utilizadas simbolos, ni caracteres especiales.
-3. Si alguna de estas restricciones se rompe, se mostrará el mensaje de error correspondiente.
+2. No deben ser utilizados letras con acentos, ni caracteres especiales.
+3. Si alguna de estas restricciones se viola, se mostrará un mensaje de error correspondiente.
 
 ## 🚧 Algoritmo de Encriptación
 El algoritmo utilizado permite encriptar y desencriptar mensajes utilizando una matriz de códigos predefinida. La encriptación reemplaza vocales por combinaciones de letras, mientras que la desencriptación busca estas combinaciones y las reemplaza por las vocales originales.
