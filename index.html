@@ -4,22 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="description" name="Este juego fue creado como parte del desafio de aprendizaje Challenge ONE Sprint 01 de ORACLE NEXT EDUCATION // ALURA LATAM.">
     <link rel="stylesheet" href="./style.css">
+    <link href=".//img/logoEncriptador.jpg" rel="icon">
     <title>Encriptador</title>
 </head>
 
 <body class="body">
     <header>
         <div class="contenedorNavbar">
-            <a class="logo" href="index.html"><img src="./img/logoEncriptador.jpg" alt="Logo"></a>
-            <div class="navbarDiv">
-                <nav class="navbar">
-                    <ul>
-                        <li><a class="" href="#principal">Página Principal</a></li>
-                        <li><a class="" href="#contact">Contacto</a></li>
-                    </ul>
-                </nav>
+            <button id="btnMenu" class="btnMenu"> </button>
+            <div class="redes1">
+                <a href="https://www.linkedin.com/in/fabianzapata87/" target="_blank">
+                    <img src="./img/linkedin-icon.png" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/r3l4x1n" target="_blank">
+                    <img src="./img/github-icon.png" alt="GitHub">
+                </a>
             </div>
+        </div>
+        <div id="indicacionesPopup" class="indicacionesPopup">
+            <p>El juego funciona de la siguiente manera:</p>
+            <ul>
+                <li>Ingresa un texto en el campo de texto provisto.</li>
+                <li>Haz clic en el botón "Encriptar" para convertir el texto ingresado en una versión encriptada.</li>
+                <li>Para desencriptar un texto, ingresa la versión encriptada en el campo de texto y haz clic en el
+                    botón "Desencriptar".</li>
+                <li>También puedes limpiar los campos de texto haciendo clic en el botón "Limpiar".</li>
+                <li>Si deseas copiar el texto resultante al portapapeles, simplemente haz clic en el botón "Copiar".
+                </li>
+            </ul>
+            <p>Restricciones:</p>
+            <ul>
+                <li>Debe funcionar solo con letras minúsculas.</li>
+                <li>No deben ser utilizados letras con acentos, ni caracteres especiales.</li>
+            </ul>
         </div>
     </header>
 
@@ -42,15 +61,9 @@
 
     <footer>
         <div class="redes">
-            <a href="https://www.linkedin.com/in/fabianzapata87/" target="_blank">
-                <img src="./img/linkedin-icon.png" alt="LinkedIn">
-            </a>
             <img src="./img/facebook-icon.png" alt="Facebook">
             <img src="./img/x-icon.png" alt="Twitter">
             <img src="./img/skype-icon.png" alt="Skype">
-            <a href="https://github.com/r3l4x1n" target="_blank">
-                <img src="./img/github-icon.png" alt="GitHub">
-            </a>
         </div>
         <p>Relaxadito &#174;</p>
     </footer>

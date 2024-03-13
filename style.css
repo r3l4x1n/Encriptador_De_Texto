@@ -4,28 +4,49 @@
 }
 
 header {
-    background-color: #33333321; /* Color de fondo para el encabezado */
-    color: #fff; /* Color del texto */
-    padding: 10px 20px; /* Espaciado interno del encabezado */
+    background-color: #33333321;
+    color: #fff;
+    padding: 10px 20px;
     max-height: 7vh;
+    border-radius: 12px;
 }
 
-.contenedorNavbar img {
-    height: 46px;
+.contenedorNavbar button {
     position: absolute;
+    height: 55px;
+    width: 55px;
     left: 43px;
-    top: 26px;    
+    top: 26px; 
+    border-radius: 13px;  
+    background-image: url(./img/logoEncriptador.jpg); 
+    background-size: contain;
 }
 
-.contenedorNavbar{
+.redes1 {
     display: flex;
-    justify-content: space-around;
-}
+    justify-content: right;
+    gap: 28px;    
+  }
 
-.navbarDiv{
-    position: relative;
-    top: -15px;
-    right: -49px;    
+.redes1 img {
+    display: flex;
+    margin: 0px;
+    width: 50px;
+    border-radius: 8px;
+  }
+
+  .indicacionesPopup {
+    display: none;
+    position: absolute;
+    top: 85px; 
+    width: 24%;
+    
+    background-color: #333333e5;
+    padding: 10px;
+    border: 1px solid #002fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(226, 0, 0, 0.2);
+    z-index: 999;
 }
 
 .main {
@@ -110,8 +131,7 @@ footer {
     display: flex;
     padding: 10px;
     justify-content: center;
-    gap: 28px;
-    
+    gap: 28px;    
   }
   
   .redes img {
@@ -127,9 +147,3 @@ footer {
     margin-top: 0;
   }
   
-
-
-
-
-
-

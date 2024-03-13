@@ -1,11 +1,11 @@
 # ⚠️ Descripción:
 Este juego fue creado como parte del desafio de aprendizaje **Challenge ONE Sprint 01** de **ORACLE NEXT EDUCATION // ALURA LATAM**. Es un juego simple que te permite encriptar y desencriptar texto utilizando un algoritmo específico bajo las siguientes condiciones de encriptación:
 
-La letra "e" es convertida para "enter"
-La letra "i" es convertida para "imes"
-La letra "a" es convertida para "ai"
-La letra "o" es convertida para "ober"
-La letra "u" es convertida para "ufat"
+- La letra "e" es convertida para "enter"
+- La letra "i" es convertida para "imes"
+- La letra "a" es convertida para "ai"
+- La letra "o" es convertida para "ober"
+- La letra "u" es convertida para "ufat"
 
 ## 🛠️ FUNCIONAMIENTO 
 **El juego funciona de la siguiente manera:**

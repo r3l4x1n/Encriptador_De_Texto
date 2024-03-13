@@ -65,7 +65,7 @@ function validarEntrada(texto) {
     return "";
 }
 
-// ********************* BOTONES *********************
+// ****************** BOTONES *********************
 
 function btnEncriptar() {
     const texto = campoTexto.value;
@@ -118,3 +118,18 @@ async function btnCopiar() {
         console.error("Error al copiar el texto al portapapeles.", error);
     }
 }
+
+// ****************** METODOS *********************
+
+document.addEventListener("DOMContentLoaded", function () {
+    let btn = document.getElementById("btnMenu");
+    let box = document.getElementById("indicacionesPopup");
+
+    btn.addEventListener("click", function () {
+        if (box.style.display === "none") {
+            box.style.display = "block";            
+        } else {
+            box.style.display = "none";
+        }
+    });
+});
