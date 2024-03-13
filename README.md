@@ -28,8 +28,9 @@ Este algoritmo utilizado permite encriptar y desencriptar mensajes utilizando un
 Este juego fue creado por r3lax1n como un parte del proyecto de aprendizaje Challenge ONE Sprint 01 para ALURA LATAM con el fin de practicar nuestras habilidades de desarrollo web.
 
 ## 📁 Acceso al Proyecto
-- **Puedes clonar el repositorio desde:** [aquí](https://github.com/r3l4x1n/Encriptador_De_Texto.git).
-- **Pagina DEMO:** [https://r3l4x1n.github.io/Encriptador_De_Texto/].
+- **Puedes clonar el repositorio desde:** <a href="https://github.com/r3l4x1n/Encriptador_De_Texto.git" target="_blank">Aquí</a>.
+- **Pagina DEMO:** <a href="https://r3l4x1n.github.io/Encriptador_De_Texto/" target="_blank">https://r3l4x1n.github.io/Encriptador_De_Texto/</a>.
+
 
 ***¡Diviértete encriptando y desencriptando textos!***
 
