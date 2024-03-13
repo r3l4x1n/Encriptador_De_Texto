@@ -31,6 +31,5 @@ Este juego fue creado por @r3lax1n como parte del proceso de aprendizaje en la E
 - **Puedes clonar el repositorio desde:** <a href="https://github.com/r3l4x1n/Encriptador_De_Texto.git" target="_blank">Aquí</a>.
 - **Pagina DEMO:** <a href="https://r3l4x1n.github.io/Encriptador_De_Texto/" target="_blank">https://r3l4x1n.github.io/Encriptador_De_Texto/</a>.
 
-
 ***¡Diviértete encriptando y desencriptando textos!***  
 #OracleNextEducation #helloONEG6 @Oracle @AluraLatam
