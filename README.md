@@ -29,6 +29,7 @@ Este juego fue creado por r3lax1n como un parte del proyecto de aprendizaje Chal
 
 ## 📁 Acceso al Proyecto
 - **Puedes clonar el repositorio desde:** [aquí](https://github.com/r3l4x1n/Encriptador_De_Texto.git).
+- **Pagina DEMO:** [https://r3l4x1n.github.io/Encriptador_De_Texto/].
 
 ***¡Diviértete encriptando y desencriptando textos!***
 
