@@ -2,11 +2,11 @@ const campoTexto = document.querySelector("#cambiarTexto");
 const campoMensaje = document.querySelector("#mensajeEncriptado");
 
 const matrizCodgo = [
-    ["e", "enter"],  // índice 0
-    ["i", "imes"],   // índice 1
-    ["a", "ai"],     // índice 2
-    ["o", "ober"],   // índice 3
-    ["u", "ufat"],   // índice 4
+    ["e", "enter"],  
+    ["i", "imes"],   
+    ["a", "ai"],     
+    ["o", "ober"],   
+    ["u", "ufat"],   
 ];
 
 function encriptar(fraseEncriptada) {
@@ -51,6 +51,7 @@ function validarEntrada(texto) {
     const contieneNumeros = /[0-9]/.test(texto);
     const contieneSimbolos = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(texto);
     const estaVacio = texto.length === 0;
+    const contieneTildes = /[\u00C0-\u00FF\u0300-\u036f]/g.test(texto);
 
     if (contieneMayusculas) {
         return "El texto no debe contener letras mayúsculas.";
@@ -60,6 +61,8 @@ function validarEntrada(texto) {
         return "El texto no debe contener símbolos ni caracteres especiales.";
     } else if (estaVacio) {
         return "El texto no debe estar vacío.";
+    } else if (contieneTildes) {
+        return "El texto no debe contener tildes.";
     }
 
     return "";
@@ -119,7 +122,7 @@ async function btnCopiar() {
     }
 }
 
-// ****************** METODOS *********************
+// ****************** EVENTOS *********************
 
 document.addEventListener("DOMContentLoaded", function () {
     let btn = document.getElementById("btnMenu");

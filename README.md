@@ -19,7 +19,9 @@ Este juego fue creado como parte del desafio de aprendizaje **Challenge ONE Spri
 El juego tiene algunas restricciones en cuanto al texto que puede procesar:
 1. Debe funcionar solo con letras minúsculas.
 2. No deben ser utilizados simbolos, ni caracteres especiales.
-3. Si alguna de estas condiciones se rompe, se mostrará un mensaje de error correspondiente.
+3. El texto no debe de conter tildes.  
+
+Si alguna de estas condiciones se rompe, se mostrará el mensaje de error correspondiente.
 
 ## 🚧 Algoritmo De Encriptación
 El algoritmo utilizado permite encriptar y desencriptar mensajes utilizando una matriz de códigos predefinida. La encriptación reemplaza vocales por combinaciones de letras, mientras que la desencriptación busca estas combinaciones y las reemplaza por las vocales originales.
