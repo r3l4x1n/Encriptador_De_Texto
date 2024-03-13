@@ -117,8 +117,8 @@ header {
 }
 
 .btnCopiado {
-    background-color: #4CAF50; /* Cambiar a verde para indicar éxito */
-    color: #fff; /* Color del texto */
+    background-color: #4caf4fd5;
+    color: #fff;
 }
 
 footer {    
