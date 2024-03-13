@@ -104,10 +104,16 @@ function btnDesencriptar() {
 async function btnCopiar() {
     const mensajeEncriptado = document.getElementById("mensajeEncriptado");
     const texto = mensajeEncriptado.value;
+    const botonCopiar = document.getElementById("botonCopiar");
 
     try {
         await navigator.clipboard.writeText(texto);
-        console.log("Texto copiado al portapapeles!");
+        botonCopiar.classList.add("btnCopiado");
+        botonCopiar.textContent = "Texto Copiado";
+        setTimeout(() => {
+            botonCopiar.classList.remove("btnCopiado");
+            botonCopiar.textContent = "Copiar Texto";
+        }, 2000);
     } catch (error) {
         console.error("Error al copiar el texto al portapapeles.", error);
     }

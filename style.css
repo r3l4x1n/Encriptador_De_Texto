@@ -1,7 +1,31 @@
 .body {
     height: 100%;
     margin: 20px;
+}
 
+header {
+    background-color: #33333321; /* Color de fondo para el encabezado */
+    color: #fff; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno del encabezado */
+    max-height: 7vh;
+}
+
+.contenedorNavbar img {
+    height: 46px;
+    position: absolute;
+    left: 43px;
+    top: 26px;    
+}
+
+.contenedorNavbar{
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbarDiv{
+    position: relative;
+    top: -15px;
+    right: -49px;    
 }
 
 .main {
@@ -12,18 +36,6 @@
     gap: 18px;
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
     height: 70vh;
-}
-
-.contenedorNavbar{
-    display: flex;
-    justify-content: space-around;
-}
-
-.contenedorNavbar img {
-    height: 86px;
-    position: absolute;
-    left: 50px;
-    top: -3px;    
 }
 
 .textoIngresado,
@@ -82,3 +94,42 @@
     background-color: #009688;
     color: #fff;
 }
+
+.btnCopiado {
+    background-color: #4CAF50; /* Cambiar a verde para indicar éxito */
+    color: #fff; /* Color del texto */
+}
+
+footer {    
+    padding: 20px;
+    text-align: center;
+    height: 1vh;
+}
+
+.redes {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    gap: 28px;
+    
+  }
+  
+  .redes img {
+    display: inline-block;
+    margin: 0px;
+    width: 24px;
+    border-radius: 8px;
+  }
+
+  p {
+    pad: 0%;
+    margin: 0%;
+    margin-top: 0;
+  }
+  
+
+
+
+
+
+
